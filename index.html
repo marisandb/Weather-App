@@ -9,99 +9,116 @@
     <link rel="stylesheet" href="./assets/style.css"/>
 </head>
 <body>
-    <header class="container-fluid">
-        <h1> Weather Dashboard</h1>
+    <header class="container">
+        <h1 class="display-1 bg-info title"> Weather Dashboard</h1>
     </header>
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h2>Search for a City</h2>
                 <form id="search-form">
                     <input type="text" id="city-search" class="form-control" placeholder="Enter City">
-                    <button class="btn btn-primary" type="button" id="btn">Search</button>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary btn-lg" type="button" id="btn">Search</button>
+                    </div>
                 </form>
-                <div class="d-grid gap-2">
-                    <ul class="list-group">
-                        <li class="list-group-item list-group-item-dark text-center">Austin</li>
-                        <li class="list-group-item list-group-item-dark text-center">Chicago</li>
-                        <li class="list-group-item list-group-item-dark text-center">New York</li>
-                        <li class="list-group-item list-group-item-dark text-center">Orlando</li>
-                        <li class="list-group-item list-group-item-dark text-center">San Fransico</li>
-                        <li class="list-group-item list-group-item-dark text-center">Seattle</li>
-                        <li class="list-group-item list-group-item-dark text-center">Denver</li>
-                        <li class="list-group-item list-group-item-dark text-center">Atlanta</li>
-                    </ul>
+                <div class="search-history">
                 </div>
             </div>
         
-            <div class="col-md-4 .offset-md-0">
-                <h2> <span id="searched-city"></span></h2>
-                <div id="city-con"></div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item" id="temp">Temp: Display</li>
-                    <li class="list-group-item">Wind: Display</li>
-                    <li class="list-group-item">Humidty: Display</li>
-                    <li class="list-group-item">UV Index: Display</li>
-                </ul>
+            <div class="col-md-9 .offset-md-0" id="main-forecast">
+                <div class="card main-display">
+                    <div>
+                        <h2 id="city"> City Name</h2>
+                        <img class="img-fluid weather-icon" id="icon"></img>
+                    </div>
+                    <div>
+                    <ul class="list-group list-group-flush" id="main-list">
+                        <li class="list-group-item" id="temp">Temp: Display</li>
+                        <li class="list-group-item" id ="wind">Wind: Display</li>
+                        <li class="list-group-item" id ="humidity">Humidty: Display</li>
+                        <li class="list-group-item" id ="uv">UV Index: Display</li>
+                    </ul>
+                    </div>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <h3>5-Day Forecast</h3>
+        <h3 class="bg-info title">5-Day Forecast</h3>
     </div>
     
-    <div class="container">
-        <div class="row">
-
-            <div class="col">
-            <h4>DATE</h4>
-            <img>weather image</image> 
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">Temp: Display</li>
-                <li class="list-group-item">Wind: Display</li>
-                <li class="list-group-item">Humidty: Display</li>
-            </ul>
+    <div class="row forecast-container">
+        <div class="col s12 m6 l2">
+            <div class= "card">
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <h5 class="list-group-item date">Date:</h5>
+                        <a class="list-group-item weather-icon" src="" alt="">Icon:</a>
+                        <li class="list-group-item temp">Temp:</li>
+                        <li class="list-group-item wind">Wind:</li>
+                        <li class="list-group-item humidity">Humidity:</li>
+                    </ul>
+                </div>  
             </div>
-            <div class="col">
-                <h4>DATE</h4>
-                <img>weather image</image> 
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Temp: Display</li>
-                    <li class="list-group-item">Wind: Display</li>
-                    <li class="list-group-item">Humidty: Display</li>
-                </ul>
+        </div>
+        
+        <div class="col s12 m6 l2">
+            <div class= "card">
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <h5 class="list-group-item date">Date:</h5>
+                        <a class="list-group-item weather-icon" src="" alt="">Icon:</a>
+                        <li class="list-group-item temp">Temp:</li>
+                        <li class="list-group-item wind">Wind:</li>
+                        <li class="list-group-item humidity">Humidity:</li>
+                    </ul>
+                </div>  
             </div>
-            <div class="col">
-                <h4>DATE</h4>
-                <img>weather image</image> 
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Temp: Display</li>
-                    <li class="list-group-item">Wind: Display</li>
-                    <li class="list-group-item">Humidty: Display</li>
-                </ul>
+        </div>
+        <div class="col s12 m6 l2">
+            <div class= "card">
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <h5 class="list-group-item date">Date:</h5>
+                        <a class="list-group-item weather-icon" src="" alt="">Icon:</a>
+                        <li class="list-group-item temp">Temp:</li>
+                        <li class="list-group-item wind">Wind:</li>
+                        <li class="list-group-item humidity">Humidity:</li>
+                    </ul>
+                </div>  
             </div>
-            <div class="col">
-                <h4>DATE</h4>
-                <img>weather image</image> 
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Temp: Display</li>
-                    <li class="list-group-item">Wind: Display</li>
-                    <li class="list-group-item">Humidty: Display</li>
-                </ul>
+        </div>
+        <div class="col s12 m6 l2">
+            <div class= "card">
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <h5 class="list-group-item date">Date:</h5>
+                        <a class="list-group-item weather-icon" src="" alt="">Icon:</a>
+                        <li class="list-group-item temp">Temp:</li>
+                        <li class="list-group-item wind">Wind:</li>
+                        <li class="list-group-item humidity">Humidity:</li>
+                    </ul>
+                </div>  
             </div>
-            <div class="col">
-                <h4>DATE</h4>
-                <img>weather image</image> 
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Temp: Display</li>
-                    <li class="list-group-item">Wind: Display</li>
-                    <li class="list-group-item">Humidty: Display</li>
-                </ul>
+        </div>
+        <div class="col s12 m6 l2">
+            <div class= "card">
+                <div>
+                    <ul class="list-group list-group-flush">
+                        <h5 class="list-group-item date">Date:</h5>
+                        <a class="list-group-item weather-icon" src="" alt="">Icon:</a>
+                        <li class="list-group-item temp">Temp:</li>
+                        <li class="list-group-item wind">Wind:</li>
+                        <li class="list-group-item humidity">Humidity:</li>
+                    </ul>
+                </div>  
             </div>
         </div>
     </div>
-  
+</div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./assets/weather.js"></script>
 </body>
 </html>
